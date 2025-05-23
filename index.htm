@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<style>
+    h3 {
+        font-size: 3.25rem;
+        text-align: center;
+    }
+
+    header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 50;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        padding-bottom: 4px;
+        backdrop-filter: blur(8px);
+        background-color: #eeea;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: .25em;
+        margin-top: 40px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .flex-row>div {
+        flex: 1;
+        border-radius: 7px;
+        padding: .5em;
+        min-width: 200px;
+    }
+
+    #projects img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .tag {
+        background: hsla(353, 100%, 30%, 25%);
+        color: var(--accent);
+        padding: 4px;
+        border-radius: 4px;
+        white-space: nowrap;
+        line-height: 2;
+    }
+
+    .pattern {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-color: #000;
+        opacity: .15;
+        -webkit-mask: url(assets/hero.svg) no-repeat center / contain;
+        mask: url(assets/hero.svg) no-repeat center / contain;
+    }
+</style>
+
+<body>
+    <header>
+        <div >
+
+            <nav class="flex items-center space-x-6 text-gray-700 dark:text-gray-200 font-medium">
+                <h1 class="text-3xl font-bold text-violet-600 dark:text-violet-400 font-display">Leo Scopeta</h1>
+                <div>
+                    <a href="#home" class="hover:text-violet-500 dark:hover:text-violet-300">Home</a>
+                    <a href="#projects" class="hover:text-violet-500 dark:hover:text-violet-300">Projects</a>
+                    <a href="#about" class="hover:text-violet-500 dark:hover:text-violet-300">About</a>
+                    <a href="#contact" class="hover:text-violet-500 dark:hover:text-violet-300">Contact</a>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="home" style="display: flex; 
+    position: relative;
+        justify-content: center; 
+        align-items: center; 
+        min-height: 100vh;">
+        <div class="pattern"></div>
+        <div style="max-width: 56rem; text-align: center; ">
+            <h1 style="margin-bottom: 1.5rem; 
+            font-size: max(3rem,10.5vmin);
+            line-height: 1; 
+            font-weight: 700; 
+            line-height: 1.5; ">
+                Design That <span style="color: var(--accent);text-decoration: underline;">Works</span>, Not Just Looks.
+            </h1>
+            <p style="line-height: 1.5;font-size: 20px;">
+                I craft visual identities, user experiences, and digital stories that cause <span
+                    style="color: var(--accent);text-decoration: underline;font-weight: bold;">Impact</span>.
+            </p>
+            <div style="display: flex;flex-grow: 1;justify-content: center;gap: 16px;">
+                <a href="#projects" class="btn">View My
+                    Work</a>
+                <a href="#contact" class="btn secondary">Contact</a>
+            </div>
+        </div>
+    </section>
+     <section id="projects" style="padding-top: 2rem;padding-bottom: 2rem; ">
+        <div class="padding-left: 1rem;padding-right: 1rem; max-width: 72rem; ">
+            <h3>Projects</h3>
+            <div class="flex-row">
+                <div style="padding: 1.5rem; 
+                border-radius: 0.75rem; 
+                padding: .5em 0;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+                ">
+                    <img src="assets/screenshot/s1.png" alt="Branding Project" style="max-width: 45vw; max-height: 50vh;">
+                    <h4>Blue Pixel</h4>
+                    <p>Role: Web Developer, UX Designer</p>
+                    <p style="padding: 4px;">
+                       A sleek and modern landing page for a tech company
+                    </p>
+                </div>
+                <div style="padding: 1.5rem; 
+                border-radius: 0.75rem; 
+                padding: .5em 0;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+                ">
+                    <img src="assets/screenshot/s2.webp" alt="Branding Project" style="max-width: 45vw; max-height: 50vh;">
+                    <h4>S.A.G.E interiors</h4>
+                    <p>Role: Graphic Designer</p>
+                    <p style="padding: 4px;">
+                        A minimal, soft brand for a luxury interior design brand
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <section id="projects" style="padding:2rem 0;display: flex;flex-direction: column;">
+        <h3>Projects</h3>
+        <div style="flex-grow: 1;"></div>
+    </section>
+    <section id="about" style="padding: 2rem;">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h3 style="text-decoration: underline var(--accent);">About Me</h3>
+            <p style="text-align: center;font-size: 20px;">
+                I’m a full-stack developer who loves crafting seamless digital experiences. Whether it's designing
+                elegant UIs or engineering robust backends, I thrive on building products that users love.
+            </p>
+        </div>
+    </section>
+    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-xl mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white">Get in Touch</h3>
+            <form class="space-y-5">
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label for="">Name</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label for="">Email Address</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-data textarea">
+                        <textarea rows="8" cols="80" required></textarea>
+                        <br />
+                        <div class="underline"></div>
+                        <label for="">Write your message</label>
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-row submit-btn">
+                        <button type="submit"
+                            style="background: none;color: var(--text-color);font-size: 22px;font-weight: bold;text-decoration: underline var(--accent) 2px;">Send
+                            Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer style="background: #ddd;margin-top: 1rem;padding: 16px;font-size: 20px;text-align: center;">
+        Designed & Built by Leonardo Scopeta © 2025
+    </footer>
+</body>
+
+</html>
