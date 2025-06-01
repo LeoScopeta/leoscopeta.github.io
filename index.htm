@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Leo Scopeta | Portfolio</title>
     <link rel="stylesheet" href="/assets/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <style>
     h3 {
@@ -72,19 +73,57 @@
         -webkit-mask: url(assets/hero.svg) no-repeat center / contain;
         mask: url(assets/hero.svg) no-repeat center / contain;
     }
+
+    .projects-row>* {
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        padding: .5em 0;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .projects-row img {
+        max-width: 45vw;
+        max-height: 50vh;
+    }
+
+    @media screen and (max-width:520px) {
+        nav>div:last-child>*:not(:nth-child(even)) {
+            display: none !important;
+        }
+        .projects-row{
+            flex-direction: column;
+        }
+        .projects-row>* {
+            box-shadow: none;
+            border-radius: 0 !important;
+        }
+
+
+        .projects-row img {
+            width: 100%;
+            max-width:initial;
+            max-height: initial;
+        }
+    }
+
+    @media screen and (max-width:300px) {
+        nav>div:last-child>* {
+            display: none !important;
+        }
+    }
 </style>
 
 <body>
     <header>
-        <div >
+        <div>
 
-            <nav class="flex items-center space-x-6 text-gray-700 dark:text-gray-200 font-medium">
-                <h1 class="text-3xl font-bold text-violet-600 dark:text-violet-400 font-display">Leo Scopeta</h1>
+            <nav>
+                <h1>Leo Scopeta</h1>
                 <div>
-                    <a href="#home" class="hover:text-violet-500 dark:hover:text-violet-300">Home</a>
-                    <a href="#projects" class="hover:text-violet-500 dark:hover:text-violet-300">Projects</a>
-                    <a href="#about" class="hover:text-violet-500 dark:hover:text-violet-300">About</a>
-                    <a href="#contact" class="hover:text-violet-500 dark:hover:text-violet-300">Contact</a>
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
 
                 </div>
             </nav>
@@ -115,28 +154,20 @@
             </div>
         </div>
     </section>
-     <section id="projects" style="padding-top: 2rem;padding-bottom: 2rem; ">
+    <section id="projects" style="padding-top: 2rem;padding-bottom: 2rem; ">
         <div class="padding-left: 1rem;padding-right: 1rem; max-width: 72rem; ">
             <h3>Projects</h3>
-            <div class="flex-row">
-                <div style="padding: 1.5rem; 
-                border-radius: 0.75rem; 
-                padding: .5em 0;
-                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
-                ">
-                    <img src="assets/screenshot/s1.png" alt="Branding Project" style="max-width: 45vw; max-height: 50vh;">
+            <div class="flex-row projects-row">
+                <div>
+                    <img src="assets/screenshot/s1.png" alt="Branding Project">
                     <h4>Blue Pixel</h4>
                     <p>Role: Web Developer, UX Designer</p>
                     <p style="padding: 4px;">
-                       A sleek and modern landing page for a tech company
+                        A sleek and modern landing page for a tech company
                     </p>
                 </div>
-                <div style="padding: 1.5rem; 
-                border-radius: 0.75rem; 
-                padding: .5em 0;
-                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
-                ">
-                    <img src="assets/screenshot/s2.webp" alt="Branding Project" style="max-width: 45vw; max-height: 50vh;">
+                <div>
+                    <img src="assets/screenshot/s2.webp" alt="Branding Project">
                     <h4>S.A.G.E interiors</h4>
                     <p>Role: Graphic Designer</p>
                     <p style="padding: 4px;">
@@ -145,10 +176,6 @@
                 </div>
             </div>
         </div>
-    </section> 
-    <section id="projects" style="padding:2rem 0;display: flex;flex-direction: column;">
-        <h3>Projects</h3>
-        <div style="flex-grow: 1;"></div>
     </section>
     <section id="about" style="padding: 2rem;">
         <div class="max-w-3xl mx-auto px-4 text-center">
@@ -161,8 +188,8 @@
     </section>
     <section id="contact" class="py-20 bg-white dark:bg-gray-900">
         <div class="max-w-xl mx-auto px-4">
-            <h3 class="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white">Get in Touch</h3>
-            <form class="space-y-5">
+            <h3>Get in Touch</h3>
+            <form>
                 <div class="form-row">
                     <div class="input-data">
                         <input type="text" required>

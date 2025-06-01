@@ -178,12 +178,11 @@ form .form-row .textarea {
     transform: translateY(-20px);
     font-size: .9em;
     background-color: var(--bg-color);
-    padding: 2px;
 }
 
 .textarea textarea {
     resize: none;
-    padding-top: 10px;
+    padding-top: 18px;
     height: 90%;
 }
 
